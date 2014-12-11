@@ -59,6 +59,7 @@
     bindDefaultTypeaheadEvent: (typeahead) ->
       typeahead.bind("typeahead:selected", @updateMap)
       typeahead.bind("typeahead:cursorchanged", @updateMap)
+      typeahead.bind("typeahead:autocompleted", @updateMap)
 
     # Inits google map to display selected address from autocomplete
     initMap: ->
