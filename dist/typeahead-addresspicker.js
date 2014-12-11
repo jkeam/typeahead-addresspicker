@@ -107,7 +107,8 @@
 
       AddressPicker.prototype.bindDefaultTypeaheadEvent = function(typeahead) {
         typeahead.bind("typeahead:selected", this.updateMap);
-        return typeahead.bind("typeahead:cursorchanged", this.updateMap);
+        typeahead.bind("typeahead:cursorchanged", this.updateMap);
+        return typeahead.bind("typeahead:autocompleted", this.updateMap);
       };
 
       AddressPicker.prototype.initMap = function() {
